@@ -11,7 +11,7 @@ This portfolio is designed to represent my professional journey, including the k
 
 ---
 
-## 🚀 Built With
+## Built With
 
 - [**TypeScript**](https://www.typescriptlang.org/) (85.2%): Ensures strong typing and enhances maintainability.
 - [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) (14.6%): Adds style and enhances the visual aspect of the portfolio.
