@@ -42,7 +42,7 @@ export function Contact() {
             </div>
           </div>
 
-          <form
+          {/* <form
             className="space-y-4"
             onSubmit={(e) => e.preventDefault()}
           >
@@ -92,7 +92,7 @@ export function Contact() {
               <Send className="w-4 h-4" />
               <span>Send Message</span>
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </section>
