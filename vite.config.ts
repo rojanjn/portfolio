@@ -5,7 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
-    base: '/portfolio/portfolio',
+    base: '/portfolio/',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -52,7 +52,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'docs',
     },
     server: {
       port: 3000,
