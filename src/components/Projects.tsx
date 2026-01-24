@@ -69,7 +69,7 @@ const projects: Project[] = [
   //         tags: ['Java'],
   //         githubUrl: 'https://github.com/rojanjn/Java-Student-Tracker',
   //     },
-];
+// ];
 
 // export function Projects() {
 //   return (
