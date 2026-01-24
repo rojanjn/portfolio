@@ -1,5 +1,5 @@
 import { Hero } from './components/Hero';
-import { Projects } from './components/Projects';
+import { Projects } from './components/Projects'; // Change to default import
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';

@@ -71,78 +71,78 @@ const projects: Project[] = [
   //     },
 // ];
 
-// export function Projects() {
-//   return (
-//     <section id="projects" className="py-20 px-6">
-//       <div className="max-w-6xl mx-auto">
-//         <div className="space-y-4 mb-16">
-//           <h2 className="text-4xl md:text-5xl">
-//             Selected Work
-//           </h2>
-//           <p className="text-muted-foreground text-lg max-w-2xl">
-//             A collection of projects that showcase my skills in
-//             web and app development and design.
-//           </p>
-//         </div>
+export function Projects() {
+  return (
+    <section id="projects" className="py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="space-y-4 mb-16">
+          <h2 className="text-4xl md:text-5xl">
+            Selected Work
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl">
+            A collection of projects that showcase my skills in
+            web and app development and design.
+          </p>
+        </div>
 
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {projects.map((project) => (
-//             <article
-//               key={project.id}
-//               className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
-//             >
-//               <div className="aspect-video overflow-hidden bg-muted">
-//                 <ImageWithFallback
-//                   src={project.image}
-//                   alt={project.title}
-//                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-//                 />
-//               </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <article
+              key={project.id}
+              className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="aspect-video overflow-hidden bg-muted">
+                <ImageWithFallback
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
 
-//               <div className="p-6 space-y-4">
-//                 <div className="space-y-2">
-//                   <h3 className="text-xl">{project.title}</h3>
-//                   <p className="text-sm text-muted-foreground leading-relaxed">
-//                     {project.description}
-//                   </p>
-//                 </div>
+              <div className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-xl">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
 
-//                 <div className="flex flex-wrap gap-2">
-//                   {project.tags.map((tag) => (
-//                     <span
-//                       key={tag}
-//                       className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full"
-//                     >
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-//                 <div className="flex gap-3 pt-2">
-//                   {project.liveUrl && (
-//                     <a
-//                       href={project.liveUrl}
-//                       className="flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
-//                     >
-//                       <ExternalLink className="w-4 h-4" />
-//                       <span>Live Demo</span>
-//                     </a>
-//                   )}
-//                   {project.githubUrl && (
-//                     <a
-//                       href={project.githubUrl}
-//                       className="flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
-//                     >
-//                       <Github className="w-4 h-4" />
-//                       <span>Code</span>
-//                     </a>
-//                   )}
-//                 </div>
-//               </div>
-//             </article>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+                <div className="flex gap-3 pt-2">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      className="flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      className="flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      <span>Code</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
