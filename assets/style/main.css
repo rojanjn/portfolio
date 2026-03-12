@@ -700,6 +700,147 @@ section {
 }
 
 /* Right side big word art */
+/* ── Contact Form ── */
+.contact-form-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.form-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-counter {
+  font-size: 0.68rem;
+  opacity: 0.5;
+  transition: color 0.2s;
+}
+.char-counter.warn { color: var(--coral); opacity: 1; }
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2.5px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  outline: none;
+  transition: box-shadow 0.15s, transform 0.15s, border-color 0.2s;
+  appearance: none;
+}
+
+.form-input::placeholder { color: var(--ink-soft); opacity: 0.45; }
+
+.form-input:focus {
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: translate(-2px, -2px);
+}
+
+/* Validation states */
+.form-input.is-valid {
+  border-color: var(--mint);
+  box-shadow: 4px 4px 0 var(--mint);
+}
+.form-input.is-valid:focus {
+  box-shadow: 6px 6px 0 var(--mint);
+}
+.form-input.is-error {
+  border-color: var(--coral);
+  box-shadow: 4px 4px 0 var(--coral);
+}
+.form-input.is-error:focus {
+  box-shadow: 6px 6px 0 var(--coral);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.field-msg {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  min-height: 1rem;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.field-msg.visible { opacity: 1; }
+.field-msg.error { color: var(--coral); }
+.field-msg.success { color: #04a07a; }
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 2rem;
+  background: var(--pink);
+  color: var(--ink);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2.5px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  align-self: flex-start;
+}
+.form-submit:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.8s linear infinite; }
+
+.form-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  padding: 0.85rem 1.1rem;
+  border: 2.5px solid var(--ink);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-status.success {
+  background: #c9f7ec;
+  border-color: var(--mint);
+  color: #04503c;
+}
+.form-status.error {
+  background: #ffe0ec;
+  border-color: var(--pink);
+  color: #7a1535;
+}
+
 .contact-word-art {
     font-family: 'Syne', sans-serif;
     font-size: clamp(5rem, 12vw, 10rem);
@@ -772,6 +913,15 @@ footer {
 }
 
 /* ── Animations ── */
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%     { transform: translateX(-6px); }
+  40%     { transform: translateX(6px); }
+  60%     { transform: translateX(-4px); }
+  80%     { transform: translateX(4px); }
+}
+
 @keyframes float {
 
     0%,
