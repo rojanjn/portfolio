@@ -1,6 +1,6 @@
 # Portfolio
 
-Welcome to my portfolio! This is a showcase of my work, skills, and projects. Built with the power of **TypeScript**, **CSS**, and **HTML**, this portfolio highlights my expertise in web development and design.
+Welcome to my portfolio! This is a showcase of my work, skills, and projects. Built with the power of **HTML CSS JS**, this portfolio highlights my expertise in web development and design.
 
 ### This repository is still a work in progress, and I am gradually adding new features to make it better.
 ---
@@ -13,10 +13,8 @@ This portfolio is designed to represent my professional journey, including the k
 
 ## Built With
 
-- [**TypeScript**](https://www.typescriptlang.org/) (85.2%): Ensures strong typing and enhances maintainability.
-- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) (14.6%): Adds style and enhances the visual aspect of the portfolio.
-- [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML) (0.2%): Provides the structural foundation to the project.
-
+- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+- [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML) 
 ---
 
 ## Features
@@ -31,11 +29,6 @@ This portfolio is designed to represent my professional journey, including the k
 ## Getting Started
 
 To explore or modify this repository locally, follow the steps below:
-
-### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
 1. Clone the repository:
