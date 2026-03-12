@@ -1,12 +1,5 @@
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// ── Custom cursor ──
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
-});
-
 // ── Scroll-triggered fade-in ──
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -30,7 +23,7 @@ document.querySelectorAll('.deco-card').forEach((card, i) => {
   card.style.animation = `float ${3 + i * 0.7}s ease-in-out infinite ${i * 0.4}s`;
 });
 
-// ── Contact form: validation + async submit ──
+// ── Contact form ──
 (function () {
   const form    = document.getElementById('contact-form');
   if (!form) return;
@@ -45,79 +38,79 @@ document.querySelectorAll('.deco-card').forEach((card, i) => {
   const status  = document.getElementById('form-status');
 
   const rules = {
-    name:    { validate: v => v.trim().length >= 2,                              err: '✦ At least 2 characters please', ok: '✓ Looks good' },
-    email:   { validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),      err: '✦ Enter a valid email address',  ok: '✓ Valid email' },
-    message: { validate: v => v.trim().length >= 10,                             err: '✦ At least 10 characters please', ok: '✓ Message ready' },
+    name:    { test: v => v.trim().length >= 2,                             err: '\u2736 At least 2 characters please', ok: '\u2713 Looks good' },
+    email:   { test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),     err: '\u2736 Enter a valid email address',  ok: '\u2713 Valid email' },
+    message: { test: v => v.trim().length >= 10,                            err: '\u2736 At least 10 characters please', ok: '\u2713 Message ready' },
   };
 
-  function getMsg(key) { return document.getElementById('msg-' + key); }
-
-  function setFieldState(input, valid, msgEl, text) {
+  // Apply visual state to a field
+  function applyState(input, valid, msgEl, text) {
     input.classList.remove('is-valid', 'is-error');
     msgEl.classList.remove('visible', 'success', 'error');
-    if (valid === null) return;
+    if (valid === null) { msgEl.textContent = ''; return; }
     input.classList.add(valid ? 'is-valid' : 'is-error');
     msgEl.textContent = text;
     msgEl.classList.add('visible', valid ? 'success' : 'error');
   }
 
-  function validateField(input) {
+  // Validate one field, return bool
+  function check(input) {
     const key  = input.dataset.validate;
     const rule = rules[key];
     if (!rule) return true;
     const val   = input.value;
-    const valid = rule.validate(val);
-    setFieldState(input, val.length === 0 ? null : valid, getMsg(key), val.length === 0 ? '' : (valid ? rule.ok : rule.err));
+    const valid = rule.test(val);
+    const msgEl = document.getElementById('msg-' + key);
+    applyState(input, val.length === 0 ? null : valid, msgEl, val.length === 0 ? '' : (valid ? rule.ok : rule.err));
     return valid;
   }
 
-  // Validate on blur, re-validate on input if already touched
+  // Wire up each field: validate on blur, re-check on input if already touched
   [nameEl, emailEl, msgEl].forEach(input => {
     let touched = false;
-    input.addEventListener('blur', () => { touched = true; validateField(input); });
-    input.addEventListener('input', () => { if (touched) validateField(input); });
+    input.addEventListener('blur', () => { touched = true; check(input); });
+    input.addEventListener('input', () => { if (touched) check(input); });
   });
 
   // Character counter
   msgEl.addEventListener('input', () => {
     const len = msgEl.value.length;
-    const max = parseInt(msgEl.getAttribute('maxlength') || 500);
+    const max = Number(msgEl.getAttribute('maxlength')) || 500;
     counter.textContent = len + ' / ' + max;
     counter.classList.toggle('warn', len > max * 0.85);
   });
 
-  // Shake animation for first invalid field
+  // Shake animation
   function shake(el) {
     el.style.animation = 'none';
-    el.offsetHeight;
+    void el.offsetWidth; // force reflow
     el.style.animation = 'shake 0.35s ease';
     el.addEventListener('animationend', () => { el.style.animation = ''; }, { once: true });
   }
 
-  // Async submit
+  // Submit
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
-    // Validate all - force show errors on untouched empty fields
-    const inputs = [nameEl, emailEl, msgEl];
-    let allValid = true;
-    inputs.forEach(input => {
+    // Validate all — force errors on empty fields too
+    const fields = [nameEl, emailEl, msgEl];
+    let allOk = true;
+    fields.forEach(input => {
       const key  = input.dataset.validate;
       const rule = rules[key];
-      const valid = rule.validate(input.value);
-      if (!valid) {
-        setFieldState(input, false, getMsg(key), input.value.length === 0 ? rule.err : (rule.validate(input.value) ? rule.ok : rule.err));
-        allValid = false;
-      }
+      const valid = rule.test(input.value);
+      const msgEl = document.getElementById('msg-' + key);
+      applyState(input, valid, msgEl, valid ? rule.ok : rule.err);
+      if (!valid) allOk = false;
     });
 
-    if (!allValid) {
-      const first = inputs.find(i => i.classList.contains('is-error'));
+    if (!allOk) {
+      const first = fields.find(i => i.classList.contains('is-error'));
       if (first) { shake(first); first.focus(); }
       return;
     }
 
-    // Submitting state
+    // Loading state
     submit.disabled = true;
     btnText.textContent = 'Sending\u2026';
     spinner.style.display = 'inline-block';
@@ -134,15 +127,18 @@ document.querySelectorAll('.deco-card').forEach((card, i) => {
 
       if (res.ok) {
         btnText.textContent = 'Sent \u2713';
-        status.textContent = '\u2736 Got it! I\u2019ll get back to you soon.';
+        status.textContent = '\u2736 Got it! I\'ll get back to you soon.';
         status.className = 'form-status success';
         status.style.display = 'block';
         form.reset();
         counter.textContent = '0 / 500';
         counter.classList.remove('warn');
-        inputs.forEach(i => setFieldState(i, null, getMsg(i.dataset.validate), ''));
+        fields.forEach(i => {
+          const msgEl = document.getElementById('msg-' + i.dataset.validate);
+          applyState(i, null, msgEl, '');
+        });
       } else {
-        throw new Error('Server error');
+        throw new Error('server');
       }
     } catch {
       spinner.style.display = 'none';
