@@ -370,6 +370,20 @@ section {
     border-bottom: 2px solid var(--ink);
 }
 
+.sketchy-wrap {
+  position: relative;
+  filter: url(#sketchy);
+  transition: filter 0.15s;
+}
+
+.sketchy-wrap:focus-within {
+  filter: url(#sketchy-focus);
+}
+
+.form-input.is-valid { border-color: var(--mint); }
+.form-input.is-error { border-color: var(--coral); }
+.form-input:focus { outline: none; }
+
 /* Skills grid */
 .skills-title {
     font-size: 1rem;
@@ -726,9 +740,9 @@ section {
   color: var(--ink);
   background: var(--cream);
   border: 2.5px solid var(--ink);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: none;
   outline: none;
-  transition: box-shadow 0.15s, transform 0.15s, border-color 0.2s;
+  transition: border-color 0.2s;
   appearance: none;
 }
 
