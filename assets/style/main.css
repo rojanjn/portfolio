@@ -370,20 +370,6 @@ section {
     border-bottom: 2px solid var(--ink);
 }
 
-.sketchy-wrap {
-  position: relative;
-  filter: url(#sketchy);
-  transition: filter 0.15s;
-}
-
-.sketchy-wrap:focus-within {
-  filter: url(#sketchy-focus);
-}
-
-.form-input.is-valid { border-color: var(--mint); }
-.form-input.is-error { border-color: var(--coral); }
-.form-input:focus { outline: none; }
-
 /* Skills grid */
 .skills-title {
     font-size: 1rem;
@@ -734,7 +720,7 @@ section {
 .form-input {
   cursor: text;
   width: 100%;
-  padding: 1rem 1.2rem;
+  padding: 1.4rem 1.4rem;
   font-family: 'Syne', sans-serif;
   font-size: 1rem;
   color: var(--ink);
@@ -770,9 +756,8 @@ section {
 }
 
 .form-textarea {
-  resize: vertical;
-  min-height: 220px;
-  width: 100%;
+   min-height: 260px;  /* was 220px */
+   rows: 8;
 }
 
 .field-msg {
