@@ -1,416 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Rojan — Creative Developer</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="assets/style/main.css">
 </head>
 
 <body>
-<!-- Custom cursor -->
-<div id="cursor"></div>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
 
-<!-- Doodle background -->
-<svg class="doodle-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-  <g fill="none" stroke="#1a1410" stroke-width="1.5">
-    <circle cx="120" cy="150" r="40"/>
-    <circle cx="120" cy="150" r="20"/>
-    <line x1="80" y1="150" x2="160" y2="150"/>
-    <line x1="120" y1="110" x2="120" y2="190"/>
-    <rect x="1300" y="200" width="60" height="60" transform="rotate(15 1330 230)"/>
-    <path d="M 200 700 Q 220 680 240 700 Q 260 720 280 700"/>
-    <path d="M 1100 600 Q 1120 580 1140 600 Q 1160 620 1180 600"/>
-    <polygon points="700,50 720,85 680,85"/>
-    <polygon points="50,450 70,485 30,485"/>
-    <polygon points="1380,650 1400,685 1360,685"/>
-    <circle cx="900" cy="800" r="30"/>
-    <circle cx="900" cy="800" r="15"/>
-    <line x1="870" y1="800" x2="930" y2="800"/>
-    <line x1="900" y1="770" x2="900" y2="830"/>
-    <rect x="400" y="400" width="30" height="30" transform="rotate(30 415 415)"/>
-    <path d="M 1200 100 C 1220 80, 1260 80, 1280 100 C 1300 120, 1300 160, 1280 180 C 1260 200, 1220 200, 1200 180 C 1180 160, 1180 120, 1200 100 Z"/>
-  </g>
-</svg>
+  <!-- Doodle background -->
+  <svg class="doodle-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g fill="none" stroke="#1a1410" stroke-width="1.5">
+      <circle cx="120" cy="150" r="40" />
+      <circle cx="120" cy="150" r="20" />
+      <line x1="80" y1="150" x2="160" y2="150" />
+      <line x1="120" y1="110" x2="120" y2="190" />
+      <rect x="1300" y="200" width="60" height="60" transform="rotate(15 1330 230)" />
+      <path d="M 200 700 Q 220 680 240 700 Q 260 720 280 700" />
+      <path d="M 1100 600 Q 1120 580 1140 600 Q 1160 620 1180 600" />
+      <polygon points="700,50 720,85 680,85" />
+      <polygon points="50,450 70,485 30,485" />
+      <polygon points="1380,650 1400,685 1360,685" />
+      <circle cx="900" cy="800" r="30" />
+      <circle cx="900" cy="800" r="15" />
+      <line x1="870" y1="800" x2="930" y2="800" />
+      <line x1="900" y1="770" x2="900" y2="830" />
+      <rect x="400" y="400" width="30" height="30" transform="rotate(30 415 415)" />
+      <path
+        d="M 1200 100 C 1220 80, 1260 80, 1280 100 C 1300 120, 1300 160, 1280 180 C 1260 200, 1220 200, 1200 180 C 1180 160, 1180 120, 1200 100 Z" />
+    </g>
+  </svg>
 
-<!-- ── NAV ── -->
-<nav>
-  <a href="#" class="nav-logo">rj<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#" class="nav-logo">rj<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- ── HERO ── -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow animate-in delay-1">Hello, I'm</div>
-    <h1 class="hero-name animate-in delay-2">
-      Rojan
-      <span class="line2">Jafarnezhad</span>
-    </h1>
-    <p class="hero-title animate-in delay-3">Creative Developer & Photographer ✦</p>
-    <p class="hero-bio animate-in delay-4">
-      I craft beautiful digital experiences that bring ideas to life.
-      Specializing in web & app development, creative coding, and
-      design that actually <em style="background:var(--yellow);padding:0 3px;border-bottom:2px solid #1a1410">feels</em> like something.
-    </p>
-    <div class="animate-in delay-5" style="display:flex;align-items:center;flex-wrap:wrap;gap:0">
-      <a href="#projects" class="hero-cta">
-        View my work
-        <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 8h10M9 4l4 4-4 4"/>
-        </svg>
-      </a>
-      <a href="mailto:rojanjafarnezhad@gmail.com" class="hero-cta hero-cta-ghost">
-        Say hello ✉
-      </a>
-    </div>
-    <div class="hero-socials animate-in delay-5">
-      <a href="https://github.com/rojanjn/" target="_blank" rel="noopener" class="social-pill">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        GitHub
-      </a>
-      <a href="https://linkedin.com/in/rojanj/" target="_blank" rel="noopener" class="social-pill">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-  </div>
-
-  <!-- Hero decoration -->
-  <div class="hero-right">
-    <div class="deco-card deco-card-1">
-      <div class="deco-card-label">Current vibe</div>
-      <div class="deco-card-val">Creative Developer</div>
-      <div style="margin-top:0.8rem">
-        <span class="deco-tag">Frontend</span>
-        <span class="deco-tag">Design</span>
-        <span class="deco-tag">Creative</span>
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow animate-in delay-1">Hello, I'm</div>
+      <h1 class="hero-name animate-in delay-2">
+        Rojan
+        <span class="line2">Jafarnezhad</span>
+      </h1>
+      <p class="hero-title animate-in delay-3">Creative Developer & Photographer ✦</p>
+      <p class="hero-bio animate-in delay-4">
+        I craft beautiful digital experiences that bring ideas to life.
+        Specializing in web & app development, creative coding, and
+        design that actually <em
+          style="background:var(--yellow);padding:0 3px;border-bottom:2px solid #1a1410">feels</em> like something.
+      </p>
+      <div class="animate-in delay-5" style="display:flex;align-items:center;flex-wrap:wrap;gap:0">
+        <a href="#projects" class="hero-cta">
+          View my work
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+        <a href="mailto:rojanjafarnezhad@gmail.com" class="hero-cta hero-cta-ghost">
+          Say hello ✉
+        </a>
+      </div>
+      <div class="hero-socials animate-in delay-5">
+        <a href="https://github.com/rojanjn/" target="_blank" rel="noopener" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/rojanj/" target="_blank" rel="noopener" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          LinkedIn
+        </a>
       </div>
     </div>
-    <div class="deco-card deco-card-2">
-      <div class="deco-card-label">Based in</div>
-      <div class="deco-card-big">🍁 YYZ</div>
-      <div style="font-family:'DM Mono',monospace;font-size:0.72rem;margin-top:0.5rem;opacity:0.6">Toronto, ON</div>
-    </div>
-    <div class="deco-card deco-card-3">
-      <div class="deco-card-label">Also into</div>
-      <div class="deco-card-val">Photography & Creative Coding</div>
-    </div>
-    <!-- Floating stars -->
-    <div class="floater" style="--r:12deg;font-size:2rem;top:0;right:0;animation:float 3s ease-in-out infinite;color:var(--pink)">✦</div>
-    <div class="floater" style="--r:-8deg;font-size:1.4rem;bottom:30px;right:10px;animation:float 4s ease-in-out infinite 0.5s;color:var(--coral)">◆</div>
-    <div class="floater" style="font-size:1.2rem;top:50%;left:0;animation:float 3.5s ease-in-out infinite 1s;color:var(--lilac)">●</div>
-  </div>
-</section>
 
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div>
-    <span class="section-tag">About</span>
-    <h2 class="section-heading">A little<br><span class="accent">about me</span></h2>
-    <div class="about-text">
-      <p>
-        I'm a creative developer passionate about building
-        <em>unique, user-friendly</em> web and app experiences.
-        With a keen eye for design and a love for clean code,
-        I bridge the gap between aesthetics and functionality.
-      </p>
-      <p>
-        When I'm not coding, you'll find me with my camera,
-        taking photos of everything I find <em>aesthetic</em>,
-        or experimenting with creative coding and taking notes
-        from open-source projects. I believe in continuous
-        learning and staying curious.
-      </p>
+    <!-- Hero decoration -->
+    <div class="hero-right">
+      <div class="deco-card deco-card-1">
+        <div class="deco-card-label">Current vibe</div>
+        <div class="deco-card-val">Creative Developer</div>
+        <div style="margin-top:0.8rem">
+          <span class="deco-tag">Frontend</span>
+          <span class="deco-tag">Design</span>
+          <span class="deco-tag">Creative</span>
+        </div>
+      </div>
+      <div class="deco-card deco-card-2">
+        <div class="deco-card-label">Based in</div>
+        <div class="deco-card-big">🍁 YYZ</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.72rem;margin-top:0.5rem;opacity:0.6">Toronto, ON</div>
+      </div>
+      <div class="deco-card deco-card-3">
+        <div class="deco-card-label">Also into</div>
+        <div class="deco-card-val">Photography & Creative Coding</div>
+      </div>
+      <!-- Floating stars -->
+      <div class="floater"
+        style="--r:12deg;font-size:2rem;top:0;right:0;animation:float 3s ease-in-out infinite;color:var(--pink)">✦</div>
+      <div class="floater"
+        style="--r:-8deg;font-size:1.4rem;bottom:30px;right:10px;animation:float 4s ease-in-out infinite 0.5s;color:var(--coral)">
+        ◆</div>
+      <div class="floater"
+        style="font-size:1.2rem;top:50%;left:0;animation:float 3.5s ease-in-out infinite 1s;color:var(--lilac)">●</div>
     </div>
-  </div>
+  </section>
 
-  <div>
-    <p class="skills-title">Skills & Technologies</p>
-    <div class="skills-grid">
-      <span class="skill-badge c-pink">HTML / CSS</span>
-      <span class="skill-badge c-yellow">JavaScript</span>
-      <span class="skill-badge c-yellow">ASP.NET</span>
-      <span class="skill-badge c-mint">Python</span>
-      <span class="skill-badge c-sky">C#</span>
-      <span class="skill-badge c-sky">Java</span>
-      <span class="skill-badge c-coral">MySQL</span>
-      <span class="skill-badge c-coral">PostgreSQL</span>
-      <span class="skill-badge c-mint">PHP</span>
-      <span class="skill-badge c-lilac">Bash</span>
-      <span class="skill-badge c-pink">Figma</span>
-      <span class="skill-badge c-yellow">Responsive Design</span>
-      <span class="skill-badge c-sky">Accessibility</span>
-    </div>
-
-    <!-- Fun floater stickers -->
-    <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;opacity:0.65">
-      <div style="border:var(--border);padding:0.6rem 1rem;background:var(--mint);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(-2deg)">✦ clean code</div>
-      <div style="border:var(--border);padding:0.6rem 1rem;background:var(--lilac);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(1.5deg)">pixel perfect ⬡</div>
-      <div style="border:var(--border);padding:0.6rem 1rem;background:var(--yellow);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(-1deg)">◆ creative first</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROJECTS ── -->
-<section id="projects">
-  <div class="projects-header">
+  <!-- ── ABOUT ── -->
+  <section id="about">
     <div>
-      <span class="section-tag">Work</span>
-      <h2 class="section-heading" style="margin-bottom:0">Selected<br><span style="color:var(--coral)">Projects</span></h2>
+      <span class="section-tag">About</span>
+      <h2 class="section-heading">A little<br><span class="accent">about me</span></h2>
+      <div class="about-text">
+        <p>
+          I'm a creative developer passionate about building
+          <em>unique, user-friendly</em> web and app experiences.
+          With a keen eye for design and a love for clean code,
+          I bridge the gap between aesthetics and functionality.
+        </p>
+        <p>
+          When I'm not coding, you'll find me with my camera,
+          taking photos of everything I find <em>aesthetic</em>,
+          or experimenting with creative coding and taking notes
+          from open-source projects. I believe in continuous
+          learning and staying curious.
+        </p>
+      </div>
     </div>
-    <p style="font-size:0.95rem;color:var(--ink-soft);max-width:32ch;line-height:1.6">
-      A collection of things I've built, from fun little web toys to practical tools.
+
+    <div>
+      <p class="skills-title">Skills & Technologies</p>
+      <div class="skills-grid">
+        <span class="skill-badge c-pink">HTML / CSS</span>
+        <span class="skill-badge c-yellow">JavaScript</span>
+        <span class="skill-badge c-yellow">ASP.NET</span>
+        <span class="skill-badge c-mint">Python</span>
+        <span class="skill-badge c-sky">C#</span>
+        <span class="skill-badge c-sky">Java</span>
+        <span class="skill-badge c-coral">MySQL</span>
+        <span class="skill-badge c-coral">PostgreSQL</span>
+        <span class="skill-badge c-mint">PHP</span>
+        <span class="skill-badge c-lilac">Bash</span>
+        <span class="skill-badge c-pink">Figma</span>
+        <span class="skill-badge c-yellow">Responsive Design</span>
+        <span class="skill-badge c-sky">Accessibility</span>
+      </div>
+
+      <!-- Fun floater stickers -->
+      <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;opacity:0.65">
+        <div
+          style="border:var(--border);padding:0.6rem 1rem;background:var(--mint);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(-2deg)">
+          ✦ clean code</div>
+        <div
+          style="border:var(--border);padding:0.6rem 1rem;background:var(--lilac);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(1.5deg)">
+          pixel perfect ⬡</div>
+        <div
+          style="border:var(--border);padding:0.6rem 1rem;background:var(--yellow);box-shadow:3px 3px 0 var(--ink);font-family:'Caveat',cursive;font-size:1rem;font-weight:700;transform:rotate(-1deg)">
+          ◆ creative first</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="projects-header">
+      <div>
+        <span class="section-tag">Work</span>
+        <h2 class="section-heading" style="margin-bottom:0">Selected<br><span style="color:var(--coral)">Projects</span>
+        </h2>
+      </div>
+      <p style="font-size:0.95rem;color:var(--ink-soft);max-width:32ch;line-height:1.6">
+        A collection of things I've built, from fun little web toys to practical tools.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Featured: Decision Maker -->
+      <article class="project-card featured">
+        <div class="card-color-bar"></div>
+        <div class="card-img">
+          <img src="assets/img/ball8.png" alt="Decision Maker"
+            onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🎱 Decision Maker</div>'">
+        </div>
+        <div class="card-body">
+          <div class="card-num">01 — Featured</div>
+          <h3 class="card-title">Decision Maker</h3>
+          <p class="card-desc">A fun little 8-Ball app that answers your Yes/No questions with style. Shake it, ask it,
+            trust it.</p>
+          <div class="card-tags">
+            <span class="card-tag">JavaScript</span>
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://rojanjn.github.io/decision-maker/" target="_blank" class="card-link">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 3H3v10h10v-3M9 3h4v4M13 3L7 9" />
+              </svg>
+              Live demo
+            </a>
+            <a href="https://github.com/rojanjn/decision-maker" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Book Collection -->
+      <article class="project-card">
+        <div class="card-color-bar"></div>
+        <div class="card-img">
+          <img src="assets/img/bookcollection.png" alt="Book Collection"
+            onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>📚 Books</div>'">
+        </div>
+        <div class="card-body">
+          <div class="card-num">02</div>
+          <h3 class="card-title">Book Collection</h3>
+          <p class="card-desc">Personalized web app showcasing a small collection of books I love. A little digital
+            shelf.</p>
+          <div class="card-tags">
+            <span class="card-tag">JavaScript</span>
+            <span class="card-tag">JSON</span>
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://rojanjn.github.io/rojan-book-collection/" target="_blank" class="card-link">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 3H3v10h10v-3M9 3h4v4M13 3L7 9" />
+              </svg>
+              Live demo
+            </a>
+            <a href="https://github.com/rojanjn/rojan-book-collection" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hangsman -->
+      <article class="project-card">
+        <div class="card-color-bar"></div>
+        <div class="card-img">
+          <img src="assets/img/hangsman.png" alt="Hangsman"
+            onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🐍 Hangsman</div>'">
+        </div>
+        <div class="card-body">
+          <div class="card-num">03</div>
+          <h3 class="card-title">Hangsman</h3>
+          <p class="card-desc">Classic Hangman game built with Python for the terminal. Retro, simple, charming.</p>
+          <div class="card-tags">
+            <span class="card-tag">Python</span>
+            <span class="card-tag">ASCII</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rojanjn/python-practices/tree/main/hangsman" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Number Guessing -->
+      <article class="project-card">
+        <div class="card-color-bar"></div>
+        <div class="card-img">
+          <img src="assets/img/nguessing.png" alt="Number Guessing"
+            onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🔢 Guessing</div>'">
+        </div>
+        <div class="card-body">
+          <div class="card-num">04</div>
+          <h3 class="card-title">Number Guessing</h3>
+          <p class="card-desc">Terminal number guessing game in Python. Simple, snappy, surprisingly addictive.</p>
+          <div class="card-tags">
+            <span class="card-tag">Python</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rojanjn/python-practices/tree/main/number-guessing" target="_blank"
+              class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Student Tracker -->
+      <article class="project-card">
+        <div class="card-color-bar"></div>
+        <div class="card-img">
+          <img src="assets/img/stutracker.png" alt="Student Tracker"
+            onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>☕ Java Tracker</div>'">
+        </div>
+        <div class="card-body">
+          <div class="card-num">05</div>
+          <h3 class="card-title">Student Tracker</h3>
+          <p class="card-desc">Java console app that manages undergrad & grad students using OOP — inheritance,
+            aggregation, the works.</p>
+          <div class="card-tags">
+            <span class="card-tag">Java</span>
+            <span class="card-tag">OOP</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rojanjn/Java-Student-Tracker" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" style="position:relative">
+    <div>
+      <span class="section-tag">Contact</span>
+      <p class="contact-big">
+        Let's make<br>something <span class="squiggle">cool</span><br>together ✦
+      </p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:rojanjafarnezhad@gmail.com">RojanJafarnezhad@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" style="background:var(--mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Toronto, ON 🍁</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center">
+        <div style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--ink-soft);margin-bottom:1.5rem">open for
+          collaborations ✦</div>
+        <form action="https://formspree.io/f/xgonyypy" method="POST"
+          style="width:100%;max-width:420px;display:flex;flex-direction:column;gap:1rem;">
+          <input type="text" name="name" placeholder="Your name" required style="
+    padding:0.85rem 1rem;border:2.5px solid #1a1410;background:#fdf8f0;
+    font-family:'Syne',sans-serif;font-size:0.95rem;
+    box-shadow:3px 3px 0 #1a1410;outline:none;
+  ">
+          <input type="email" name="email" placeholder="your@email.com" required style="
+    padding:0.85rem 1rem;border:2.5px solid #1a1410;background:#fdf8f0;
+    font-family:'Syne',sans-serif;font-size:0.95rem;
+    box-shadow:3px 3px 0 #1a1410;outline:none;
+  ">
+          <textarea name="message" placeholder="Tell me what you're working on..." rows="4" required style="
+    padding:0.85rem 1rem;border:2.5px solid #1a1410;background:#fdf8f0;
+    font-family:'Syne',sans-serif;font-size:0.95rem;
+    box-shadow:3px 3px 0 #1a1410;outline:none;resize:vertical;
+  "></textarea>
+          <button type="submit" style="
+    padding:1rem 2rem;background:#ff6b9d;color:#1a1410;
+    font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;
+    border:2.5px solid #1a1410;box-shadow:4px 4px 0 #1a1410;
+    cursor:none;transition:transform 0.15s,box-shadow 0.15s;
+  " onmouseover="this.style.transform='translate(-2px,-2px)';this.style.boxShadow='6px 6px 0 #1a1410'"
+            onmouseout="this.style.transform='';this.style.boxShadow='4px 4px 0 #1a1410'">
+            Send it ✦
+          </button>
+        </form>
+        <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="https://github.com/rojanjn/" target="_blank"
+            style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s,color 0.2s"
+            onmouseover="this.style.color='#1a1410';this.style.borderColor='#1a1410'"
+            onmouseout="this.style.color='';this.style.borderColor='transparent'">github ↗</a>
+          <a href="https://linkedin.com/in/rojanj/" target="_blank"
+            style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s,color 0.2s"
+            onmouseover="this.style.color='#1a1410';this.style.borderColor='#1a1410'"
+            onmouseout="this.style.color='';this.style.borderColor='transparent'">linkedin ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-word-art">HI!</div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">rj<span>.</span></div>
+    <p class="footer-copy">
+      Made with <span class="footer-heart">♥</span> by Rojan Jafarnezhad
+      &nbsp;·&nbsp; © <span id="yr"></span>
     </p>
-  </div>
+  </footer>
 
-  <div class="projects-grid">
-
-    <!-- Featured: Decision Maker -->
-    <article class="project-card featured">
-      <div class="card-color-bar"></div>
-      <div class="card-img">
-        <img src="assets/img/ball8.png" alt="Decision Maker" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🎱 Decision Maker</div>'">
-      </div>
-      <div class="card-body">
-        <div class="card-num">01 — Featured</div>
-        <h3 class="card-title">Decision Maker</h3>
-        <p class="card-desc">A fun little 8-Ball app that answers your Yes/No questions with style. Shake it, ask it, trust it.</p>
-        <div class="card-tags">
-          <span class="card-tag">JavaScript</span>
-          <span class="card-tag">HTML</span>
-          <span class="card-tag">CSS</span>
-        </div>
-        <div class="card-links">
-          <a href="https://rojanjn.github.io/decision-maker/" target="_blank" class="card-link">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3L7 9"/></svg>
-            Live demo
-          </a>
-          <a href="https://github.com/rojanjn/decision-maker" target="_blank" class="card-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            Source
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Book Collection -->
-    <article class="project-card">
-      <div class="card-color-bar"></div>
-      <div class="card-img">
-        <img src="assets/img/bookcollection.png" alt="Book Collection" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>📚 Books</div>'">
-      </div>
-      <div class="card-body">
-        <div class="card-num">02</div>
-        <h3 class="card-title">Book Collection</h3>
-        <p class="card-desc">Personalized web app showcasing a small collection of books I love. A little digital shelf.</p>
-        <div class="card-tags">
-          <span class="card-tag">JavaScript</span>
-          <span class="card-tag">JSON</span>
-          <span class="card-tag">HTML</span>
-          <span class="card-tag">CSS</span>
-        </div>
-        <div class="card-links">
-          <a href="https://rojanjn.github.io/rojan-book-collection/" target="_blank" class="card-link">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3L7 9"/></svg>
-            Live demo
-          </a>
-          <a href="https://github.com/rojanjn/rojan-book-collection" target="_blank" class="card-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            Source
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Hangsman -->
-    <article class="project-card">
-      <div class="card-color-bar"></div>
-      <div class="card-img">
-        <img src="assets/img/hangsman.png" alt="Hangsman" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🐍 Hangsman</div>'">
-      </div>
-      <div class="card-body">
-        <div class="card-num">03</div>
-        <h3 class="card-title">Hangsman</h3>
-        <p class="card-desc">Classic Hangman game built with Python for the terminal. Retro, simple, charming.</p>
-        <div class="card-tags">
-          <span class="card-tag">Python</span>
-          <span class="card-tag">ASCII</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/rojanjn/python-practices/tree/main/hangsman" target="_blank" class="card-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            Source
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Number Guessing -->
-    <article class="project-card">
-      <div class="card-color-bar"></div>
-      <div class="card-img">
-        <img src="assets/img/nguessing.png" alt="Number Guessing" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>🔢 Guessing</div>'">
-      </div>
-      <div class="card-body">
-        <div class="card-num">04</div>
-        <h3 class="card-title">Number Guessing</h3>
-        <p class="card-desc">Terminal number guessing game in Python. Simple, snappy, surprisingly addictive.</p>
-        <div class="card-tags">
-          <span class="card-tag">Python</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/rojanjn/python-practices/tree/main/number-guessing" target="_blank" class="card-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            Source
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Student Tracker -->
-    <article class="project-card">
-      <div class="card-color-bar"></div>
-      <div class="card-img">
-        <img src="assets/img/stutracker.png" alt="Student Tracker" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder>☕ Java Tracker</div>'">
-      </div>
-      <div class="card-body">
-        <div class="card-num">05</div>
-        <h3 class="card-title">Student Tracker</h3>
-        <p class="card-desc">Java console app that manages undergrad & grad students using OOP — inheritance, aggregation, the works.</p>
-        <div class="card-tags">
-          <span class="card-tag">Java</span>
-          <span class="card-tag">OOP</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/rojanjn/Java-Student-Tracker" target="_blank" class="card-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            Source
-          </a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ── CONTACT ── -->
-<section id="contact" style="position:relative">
-  <div>
-    <span class="section-tag">Contact</span>
-    <p class="contact-big">
-      Let's make<br>something <span class="squiggle">cool</span><br>together ✦
-    </p>
-    <div class="contact-info">
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-        </div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:rojanjafarnezhad@gmail.com">RojanJafarnezhad@gmail.com</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon" style="background:var(--mint)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-val">Toronto, ON 🍁</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="position:relative;display:flex;align-items:center;justify-content:center;">
-    <div style="text-align:center">
-      <div style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--ink-soft);margin-bottom:1.5rem">open for collaborations ✦</div>
-      <a href="mailto:rojanjafarnezhad@gmail.com" style="
-        display:inline-flex;align-items:center;gap:0.7rem;
-        padding:1.2rem 2.5rem;
-        background:var(--pink);
-        color:var(--ink);
-        font-family:'Syne',sans-serif;
-        font-size:1.1rem;font-weight:700;
-        text-decoration:none;
-        border:var(--border);
-        box-shadow:var(--shadow-lg);
-        transition:transform 0.15s,box-shadow 0.15s;
-      "
-      onmouseover="this.style.transform='translate(-3px,-3px)';this.style.boxShadow='8px 8px 0 #1a1410'"
-      onmouseout="this.style.transform='';this.style.boxShadow='6px 6px 0 #1a1410'"
-      >
-        Send me a message
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-      </a>
-      <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="https://github.com/rojanjn/" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s,color 0.2s" onmouseover="this.style.color='#1a1410';this.style.borderColor='#1a1410'" onmouseout="this.style.color='';this.style.borderColor='transparent'">github ↗</a>
-        <a href="https://linkedin.com/in/rojanj/" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s,color 0.2s" onmouseover="this.style.color='#1a1410';this.style.borderColor='#1a1410'" onmouseout="this.style.color='';this.style.borderColor='transparent'">linkedin ↗</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="contact-word-art">HI!</div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="footer-logo">rj<span>.</span></div>
-  <p class="footer-copy">
-    Made with <span class="footer-heart">♥</span> by Rojan Jafarnezhad
-    &nbsp;·&nbsp; © <span id="yr"></span>
-  </p>
-</footer>
-
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Cursor
-  const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
-  });
-
-  // Scroll-triggered fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeUp 0.6s ease forwards';
-        entry.target.style.opacity = '1';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.project-card, .skill-badge, .contact-item').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity 0.5s ${i * 0.07}s, transform 0.5s ${i * 0.07}s`;
-    observer.observe(el);
-  });
-
-  // Deco cards subtle float
-  document.querySelectorAll('.deco-card').forEach((card, i) => {
-    card.style.animation = `float ${3 + i * 0.7}s ease-in-out infinite ${i * 0.4}s`;
-  });
-</script>
+  <script src="assets/script/script.js"></script>
 </body>
+
 </html>
