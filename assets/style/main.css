@@ -598,6 +598,61 @@ section {
     aspect-ratio: 16/9;
 }
 
+/* ── Photography ── */
+#photography {
+    padding: 7rem 0 4rem;
+    border-top: var(--border);
+}
+
+.photo-header {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+}
+
+.album-track-outer {
+    overflow: hidden;
+    position: relative;
+}
+
+.album-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: albumScroll 30s linear infinite;
+}
+
+.album-slide {
+    flex-shrink: 0;
+    height: 320px;
+    background: #f8f6f2;
+    padding: 10px 10px 20px 10px;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(-2deg);
+    transition: transform 0.25s;
+}
+
+.album-slide:nth-child(2n) {
+    transform: rotate(2deg);
+}
+
+.album-slide:nth-child(3n) {
+    transform: rotate(-1deg);
+}
+
+.album-slide img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    padding: 4px;
+    background: white;
+}
+
+.album-track-outer:hover .album-track {
+    animation-play-state: paused;
+}
+
 /* ── CONTACT ── */
 #contact {
     padding: 7rem 3rem;
@@ -972,6 +1027,16 @@ footer {
     }
 }
 
+@keyframes albumScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .animate-in {
     animation: fadeUp 0.6s ease forwards;
 }
@@ -1037,73 +1102,6 @@ footer {
 
     .project-card.featured .card-img {
         aspect-ratio: 16/9;
-    }
-
-    /* ── Photography ── */
-    #photography {
-        padding: 7rem 0 4rem;
-        border-top: var(--border);
-    }
-
-    .photo-header {
-        padding: 0 3rem;
-        margin-bottom: 3rem;
-    }
-
-    .album-track-outer {
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: thin;
-        scrollbar-color: var(--ink) var(--cream);
-    }
-
-    .album-track-outer::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .album-track-outer::-webkit-scrollbar-track {
-        background: var(--cream);
-    }
-
-    .album-track-outer::-webkit-scrollbar-thumb {
-        background: var(--ink);
-    }
-
-    .album-track {
-        display: flex;
-        gap: 0;
-        width: max-content;
-    }
-
-    .album-slide {
-        flex-shrink: 0;
-        height: clamp(200px, 35vh, 380px);
-        width: auto;
-        overflow: hidden;
-        background: #e8e0d4;
-    }
-
-    .album-slide img {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-        display: block;
-        pointer-events: none;
-        transition: filter 0.3s;
-    }
-
-    .album-slide img:hover {
-        filter: brightness(0.88);
-    }
-
-    .album-hint {
-        font-family: 'DM Mono', monospace;
-        font-size: 0.75rem;
-        color: var(--ink-soft);
-        opacity: 0.5;
-        margin-top: 1rem;
-        padding: 0 3rem;
-        letter-spacing: 0.08em;
     }
 
     #contact {

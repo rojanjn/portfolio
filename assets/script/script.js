@@ -150,3 +150,10 @@ document.querySelectorAll('.deco-card').forEach((card, i) => {
     }
   });
 })();
+
+// Duplicate photos for seamless infinite scroll
+const track = document.getElementById("albumTrack");
+
+if (track) {
+  track.innerHTML += track.innerHTML;
+}
