@@ -1,79 +1,59 @@
-# Portfolio
+# Rojan Jafarnezhad — Portfolio
 
-Welcome to my portfolio! This is a showcase of my work, skills, and projects. Built with the power of **HTML CSS JS**, this portfolio highlights my expertise in web development and design.
+Personal portfolio website for Rojan Jafarnezhad, creative developer & photographer based in Toronto, ON.
 
-### This repository is still a work in progress, and I am gradually adding new features to make it better.
----
-
-## About the Project
-
-This portfolio is designed to represent my professional journey, including the key projects I have worked on, my skills, and what I bring to the table as a developer. It serves as a central hub for potential collaborators, employers, and peers to learn about me.
+**[rojanjn.github.io/portfolio](https://rojanjn.github.io/portfolio)**
 
 ---
 
-## Built With
+## Stack
 
-- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) 
-- [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML) 
----
-
-## Features
-
-- Responsive design that adapts to various screen sizes.
-- Smooth animations for engaging user experience.
-- Detailed overview of skills, projects, and experiences.
-- Contact form and social media integrations.
+- HTML / CSS / JavaScript (Vanilla)
+- [Syne](https://fonts.google.com/specimen/Syne) + [Caveat](https://fonts.google.com/specimen/Caveat) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) — Google Fonts
+- [Formspree](https://formspree.io) — contact form submissions
+- Vite — local dev server
 
 ---
 
-## Getting Started
+## Sections
 
-To explore or modify this repository locally, follow the steps below:
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rojanjn/portfolio.git
-   cd portfolio
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the project:
-   ```bash
-   npm run start
-   ```
+| Section | Description |
+|---|---|
+| Hero | Intro, social links, floating info cards |
+| About | Bio, skills & technologies |
+| Work | Selected projects grid |
+| Photography | Horizontal scrolling photo album |
+| Contact | Working contact form with validation |
 
 ---
 
-## Contributing
+## Run locally
 
-Contributions are welcome! If you have suggestions or new ideas to improve the portfolio, feel free to fork the repository and submit a pull request.
-
-1. Fork the repository.
-2. Create a branch for your feature:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add your message."
-   ```
-4. Push the changes:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Open a pull request to merge your changes.
+```bash
+git clone https://github.com/rojanjn/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
 
 ---
 
-## License
+## Structure
 
-This project is under the [MIT License](LICENSE). Feel free to use, modify, or distribute the project as you see fit.
+```
+portfolio/
+├── index.html
+├── assets/
+│   ├── style/
+│   │   └── main.css
+│   ├── js/
+│   │   └── script.js
+│   ├── img/          # project screenshots
+│   └── album/        # photography
+```
 
 ---
 
-## Contact Me
+## Contact
 
-Feel free to get in touch with me for opportunities, collaborations, or just a friendly hello:
+[RojanJafarnezhad@gmail.com](mailto:RojanJafarnezhad@gmail.com) · [LinkedIn](https://linkedin.com/in/rojanj/) · [GitHub](https://github.com/rojanjn/)
