@@ -53,7 +53,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 3rem;
+    padding: 0.5rem 3rem;
     background: var(--cream);
     border-bottom: var(--border);
 }
@@ -266,7 +266,7 @@ section {
 }
 
 .deco-card-2 {
-    width: 260px;
+    width: 240px;
     background: var(--mint);
     box-shadow: var(--shadow-lg);
     transform: rotate(3deg);
@@ -276,7 +276,7 @@ section {
 }
 
 .deco-card-3 {
-    width: 240px;
+    width: 200px;
     background: var(--sky);
     box-shadow: var(--shadow-lg);
     transform: rotate(-1deg);
