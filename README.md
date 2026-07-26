@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Rojan Jafarnezhad — Portfolio
 
 Personal portfolio website for Rojan Jafarnezhad, creative developer & photographer based in Toronto, ON.
